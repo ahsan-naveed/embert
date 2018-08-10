@@ -10,6 +10,7 @@ Router.map(function() {
   // telling Ember router to run /app/routes/about.js
   this.route('about');
   this.route('contact');
+  this.route('rentals');
 });
 
 export default Router;
