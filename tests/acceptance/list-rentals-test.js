@@ -1,10 +1,12 @@
 import { module, test } from 'qunit';
 import { setupApplicationTest } from 'ember-qunit';
+import setupMirage from 'ember-cli-mirage/test-support/setup-mirage';
 import {visit, currentURL, click} from '@ember/test-helpers';
 
 module('Acceptance | list rentals', function(hooks) {
   //  application is started and shut down between each test
   setupApplicationTest(hooks);
+  setupMirage(hooks);
 
   test('should show rentals as the home page', async function(assert) {
     await visit('/');

@@ -1,7 +1,16 @@
 import { helper } from '@ember/component/helper';
 
-export function rentalPropertyType(params/*, hash*/) {
-  return params;
+const communityPropertyTypes = [
+  'condo',
+  'townhouse',
+  'apartment'
+];
+
+export function rentalPropertyType([propertyType]) {
+  if(communityPropertyTypes.includes(propertyType.toLowerCase())) {
+    return 'Community';
+  }
+  return 'Standalone';
 }
 
 export default helper(rentalPropertyType);

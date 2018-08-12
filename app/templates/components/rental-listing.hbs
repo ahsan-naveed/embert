@@ -8,7 +8,11 @@
         <span>Owner:</span> {{rental.owner}}
     </div>
     <div class="detail type">
-        <span>Type:</span> {{rental.category}}
+        <span>Type:</span>
+        {{!-- arguments in the helper will be 
+        added to an array and passed to our helper --}}
+        {{rental-property-type rental.category}} - 
+        {{rental.category}}
     </div>
     <div class="detail location">
         <span>Location:</span> {{rental.city}}
